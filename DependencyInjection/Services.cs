@@ -1,3 +1,6 @@
+// Helpful Link
+// https://softwareengineering.stackexchange.com/questions/371722/criticism-and-disadvantages-of-dependency-injection
+
 public class CompanyService {
     Dependency _dependency;
     public CompanyService(Dependency dependency) {

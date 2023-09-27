@@ -4,7 +4,6 @@ public class ExceptionHandling {
     
     public Dictionary<string, string> BuildDictionary() {
         Dictionary<string, string> dictionary = new Dictionary<string, string>();
-
         for (int i = 0; i < keys.length; i++) 
         {
             try 
@@ -15,13 +14,11 @@ public class ExceptionHandling {
             {
                 // Duplicate key.
             }
-            
         }
     }
 
     public Dictionary<string, string> BuildDictionary2() {
-                Dictionary<string, string> dictionary = new Dictionary<string, string>();
-
+        Dictionary<string, string> dictionary = new Dictionary<string, string>();
         for (int i = 0; i < keys.length; i++) 
         {
             if (dictionary.ContainsKey(keys[i]))

@@ -1,12 +1,14 @@
-public class ExceptionHandling {
-    string[] keys = new string[] { "key1", "key2", "key3", "key1" };
-    string[] values = new string[] { "value1", "value2", "value3", "value4" };
-    
-    public Dictionary<string, string> BuildDictionary() {
-        Dictionary<string, string> dictionary = new Dictionary<string, string>();
-        for (int i = 0; i < keys.length; i++) 
+public class ExceptionHandling
+{
+    static string[] keys = new string[] { "key1", "key2", "key3", "key1" };
+    static string[] values = new string[] { "value1", "value2", "value3", "value4" };
+
+    public static Dictionary<string, string> BuildDictionary()
+    {
+        Dictionary<string, string> dictionary = new();
+        for (int i = 0; i < keys.Length; i++)
         {
-            try 
+            try
             {
                 dictionary.Add(keys[i], values[i]);
             }
@@ -15,15 +17,18 @@ public class ExceptionHandling {
                 // Duplicate key.
             }
         }
+        return dictionary;
     }
 
-    public Dictionary<string, string> BuildDictionary2() {
-        Dictionary<string, string> dictionary = new Dictionary<string, string>();
-        for (int i = 0; i < keys.length; i++) 
+    public static Dictionary<string, string> BuildDictionary2()
+    {
+        Dictionary<string, string> dictionary = new();
+        for (int i = 0; i < keys.Length; i++)
         {
             if (dictionary.ContainsKey(keys[i]))
                 continue;
-            dictionary.add(keys[i]);   
+            dictionary.Add(keys[i], values[i]);
         }
+        return dictionary;
     }
 }
